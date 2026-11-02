@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="uk">
 
 <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Резюме</title>
+    
     <link rel="stylesheet" href="styles.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <style>
-     .status-badge {
+        .status-badge {
             background-color: #e8f5e9;
             color: #2e7d32;
             padding: 4px 12px;
@@ -14,101 +20,304 @@
             font-weight: 600;
             display: inline-block;
             font-family: Arial, sans-serif;
-    }
+        }
     </style>
 </head>
-<body>
-    <div class="resume-wrapper" style="box-shadow: 0 8px 30px rgba(0,0,0,0.12);">
-    
-    <header>
-        <div class = "header-content">
-        <h1>Riepina Sofiia</h1> 
-        <span class="status-badge">Available for Hire</span>
-        <p class = "contact-info">
-            <b>Date of birth:</b> 14.07.2008 | <b>Natonality:</b> Ukranian |<b>Gender:</b> Female | 
-            <b>Phone number:</b> (+380)xxxxxxx (Mobile phone) | 
-            <b>Email address:</b> <a href="mailto:sofiia.riepina.kn.2025@lpnu.ua">sofiia.riepina.kb.2025@lpnu.ua</a></p>
+
+<body class="dark-mode min-h-screen font-sans p-4 md:p-10 transition-colors duration-500">
+
+    <div class="max-w-4xl mx-auto space-y-8">
+        
+        <div class="flex justify-end mb-4">
+            <button id="theme-toggle-btn" onclick="toggleTheme()" class="px-4 py-2 rounded-full font-serif text-xs font-bold border transition-all duration-300 hover:scale-105 shadow-md">
+                Change mode
+            </button>
         </div>
-    </header>
 
-    <hr>
+        <div class="resume-wrapper bg-card" style="box-shadow: 0 8px 30px rgba(0,0,0,0.12);">
+    
+            <header id="main-header">
+                <div class="header-content p-6">
+                    <h1 class="text-3xl font-bold inline-block mr-3">Riepina Sofiia</h1> 
+                    <span class="status-badge">Available for Hire</span>
+                    <p class="contact-info mt-3 text-sm">
+                        <b>Date of birth:</b> 14.07.2008 | <b>Nationality:</b> Ukrainian | <b>Gender:</b> Female | 
+                        <br>
+                        <b>Phone number:</b> (+380)xxxxxxx (Mobile phone) | 
+                        <b>Email address:</b> <a href="mailto:sofiia.riepina.kb.2025@lpnu.ua" class="text-rose-400 underline">sofiia.riepina.kb.2025@lpnu.ua</a>
+                    </p>
+                </div>
+            </header>
 
-    <main>
-        <section>
-            <h2>Personal profile:</h2> 
-            <p>Ambitious cybersecurity student at Lviv Polytechnic National University with a strong grounding in programming languages like Python and C#. Practical skills in AWS Cloud Security, network analysis and basic ethical hacking. </p>
-       </section>
+            <hr class="border-rose-900/30">
 
-        <section id="Set_of_skills_and_background"> 
-            <article class = "info-card">
-                <h2>Education:</h2>
-                <p>Bachelor in Cybersecurity at Lviv Polytechnic National University (2025 - present)</p>
-                <h3>Certifications:</h3>
-                <ul>
-                    <li>AWS Academy</li>
-                    <li>Internship program at SoftServe</li>
-                    <li>Cambridge English Level 2 Certificate in ESOL International</li>
-                </ul>
-            </article>
+            <main class="p-6 space-y-6">
+                <section class="profile-section p-4 rounded-lg">
+                    <h2 class="text-xl font-bold mb-2">Personal profile:</h2> 
+                    <p class="text-sm">Ambitious cybersecurity student at Lviv Polytechnic National University with a strong grounding in programming languages like Python and C#. Practical skills in AWS Cloud Security, network analysis and basic ethical hacking.</p>
+                </section>
 
-            <article  class = "info-card">
-                <h2>Key skills:</h2>
-                <h3>Technical skills:</h3>
-                <ul>
-                    <li>Programming languages:</li>
-                        <ul>
-                            <li>Python</li>
-                            <li>C#/.NET (OOP fundamentals)</li>
-                            <li>Basic knowledge of HTML</li>
+                <section id="Set_of_skills_and_background" class="grid grid-cols-1 md:grid-cols-2 gap-4"> 
+                    
+                    <article class="info-card p-4 rounded-lg border sub-card">
+                        <h2 class="text-lg font-bold text-rose-500 mb-2">Education:</h2>
+                        <p class="text-sm mb-3">Bachelor in Cybersecurity at Lviv Polytechnic National University (2025 - present)</p>
+                        <h3 class="font-bold text-sm mb-1">Certifications:</h3>
+                        <ul class="list-disc list-inside text-xs space-y-1">
+                            <li>AWS Academy</li>
+                            <li>Internship program at SoftServe</li>
+                            <li>Cambridge English Level 2 Certificate in ESOL International</li>
                         </ul>
-                    <li>Tools:</li>
-                        <ul>
-                            <li>Git & GitHub</li>
-                            <li>Linux basics</li>
-                            <li>AWS (Cloud security foundations)</li>
+                    </article>
+
+                    <article class="info-card p-4 rounded-lg border sub-card">
+                        <h2 class="text-lg font-bold text-rose-500 mb-2">Key skills:</h2>
+                        <h3 class="font-bold text-sm mb-1">Technical skills:</h3>
+                        <ul class="list-disc list-inside text-xs space-y-1 mb-2">
+                            <li>Programming languages:
+                                <ul class="pl-4 list-circle">
+                                    <li>Python</li>
+                                    <li>C#/.NET (OOP fundamentals)</li>
+                                    <li>Basic knowledge of HTML</li>
+                                </ul>
+                            </li>
+                            <li>Tools:
+                                <ul class="pl-4 list-circle">
+                                    <li>Git & GitHub</li>
+                                    <li>Linux basics</li>
+                                    <li>AWS (Cloud security foundations)</li>
+                                </ul>
+                            </li>
                         </ul>
-                </ul>
-                <h3>Information security and standarts:</h3>
-                <ul>
-                    <li>Conducted a simulated security audit to check system safety using ISO/IEC 27001</li>
-                    <li>Identification of potential cyberthreats and system vulnerabilities </li>
-                </ul>
-                <h3>Soft skills:</h3>
-                <ul>
-                    <li>Communication skills</li>
-                    <li>Attentive to details</li>
-                    <li>Adaptability</li>
-                </ul>
-            </article>
+                        <h3 class="font-bold text-sm mb-1">Information security:</h3>
+                        <ul class="list-disc list-inside text-xs space-y-1 mb-2">
+                            <li>Simulated security audit using ISO/IEC 27001</li>
+                            <li>Identification of cyberthreats and vulnerabilities</li>
+                        </ul>
+                        <h3 class="font-bold text-sm mb-1">Soft skills:</h3>
+                        <ul class="list-disc list-inside text-xs space-y-1">
+                            <li>Communication skills</li>
+                            <li>Attentive to details</li>
+                            <li>Adaptability</li>
+                        </ul>
+                    </article>
 
-            <article class = "info-card">
-                <h2>Languages:</h2>
-                <ul>
-                    <li>Ukranian - native</li>
-                    <li>English - C1 </li>
-                </ul>
-            </article>
+                    <article class="info-card p-4 rounded-lg border sub-card">
+                        <h2 class="text-lg font-bold text-rose-500 mb-2">Languages:</h2>
+                        <ul class="list-disc list-inside text-xs space-y-1">
+                            <li>Ukrainian - native</li>
+                            <li>English - C1 Advanced</li>
+                        </ul>
+                    </article>
 
-            <article class = "info-card">
-                <h2>Additional information:</h2>
-                <ul>
-                    <li>Valid international passport</li>
-                    <!-- <li>A volunteer</li> -->
-                </ul>
-            </article>
+                    <article class="info-card p-4 rounded-lg border sub-card">
+                        <h2 class="text-lg font-bold text-rose-500 mb-2">Additional information:</h2>
+                        <ul class="list-disc list-inside text-xs space-y-1">
+                            <li>Valid international passport</li>
+                        </ul>
+                    </article>
 
-        </section>
+                </section>
 
-    </main>
+                <section class="info-card p-4 rounded-lg border sub-card mt-6">
+                    <h2 class="text-lg font-bold text-rose-500 mb-3">Employer Recommendations:</h2>
+           
+                    <div id="comments-container" class="space-y-3">
+                        <p class="text-xs text-rose-400 animate-pulse">Завантаження коментарів...</p>
+                    </div>
+                </section>
 
-    <hr>
+            </main>
 
+            <hr class="border-rose-900/30">
+  
+            <footer class="p-6 text-center text-xs bg-card border-t border-rose-900/30">
+                <p>&copy; 2026 Riepina Sofiia. All rights reserved.</p>
+ 
+                <div class="mt-4 p-4 rounded-lg text-left border sub-card">
+                    <p class="font-bold text-rose-500 mb-2">System information:</p>
+                    <div id="localstorage-container" class="space-y-2 font-mono text-[11px]"></div>
+            </div>
+            </footer>
 
-    <footer>
-        <p>&copy; 2026 Riepina Sofiia. All rights reserved.</p>
-    </footer>
+        </div>
 
     </div>
 
+    <div id="feedback-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+        <div class="relative w-full max-w-md p-6 rounded-2xl border-2 shadow-2xl modal-box">
+
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-rose-500 hover:text-rose-300 text-xl font-bold">
+                ✖
+            </button>
+
+            <h3 class="text-xl font-serif font-bold text-rose-500 mb-2">🖤 Feedback Form</h3>
+            <p class="text-xs opacity-70 mb-4">Форма зворотного зв'язку (надсилання на Formspree)</p>
+
+            <form action="https://formspree.io/f/mljjodqd" method="POST" class="space-y-3 text-xs font-mono">
+                <div>
+                    <label class="block text-rose-400 mb-1">Ім’я:</label>
+                    <input type="text" name="name" required placeholder="Ваше ім'я" class="w-full p-2 rounded-lg border outline-none sub-card">
+                </div>
+                <div>
+                    <label class="block text-rose-400 mb-1">Email:</label>
+                    <input type="email" name="email" required placeholder="name@example.com" class="w-full p-2 rounded-lg border outline-none sub-card">
+                </div>
+                <div>
+                    <label class="block text-rose-400 mb-1">Номер телефону:</label>
+                    <input type="tel" name="phone" placeholder="+380XXXXXXXXX" class="w-full p-2 rounded-lg border outline-none sub-card">
+                </div>
+                <div>
+                    <label class="block text-rose-400 mb-1">Повідомлення:</label>
+                    <textarea name="message" rows="3" required placeholder="Ваш текст..." class="w-full p-2 rounded-lg border outline-none sub-card"></textarea>
+                </div>
+                <button type="submit" class="w-full py-2.5 bg-rose-600 hover:bg-rose-700 text-white font-bold uppercase rounded-lg transition-all">
+                    Надіслати ✝️
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+  
+        let isDark = true;
+
+        window.addEventListener('DOMContentLoaded', () => {
+            initTheme();         
+            initLocalStorage();  
+            fetchComments();     
+            initModalTimer();    
+        });
+
+        
+        function initTheme() {
+            const hours = new Date().getHours();
+            isDark = !(hours >= 7 && hours < 21);
+            applyTheme();
+        }
+
+        function toggleTheme() {
+            isDark = !isDark;
+            applyTheme();
+        }
+
+        function applyTheme() {
+            const body = document.body;
+            const btn = document.getElementById('theme-toggle-btn');
+
+            if (isDark) {
+                body.className = "dark-mode min-h-screen font-sans p-4 md:p-10 transition-colors duration-500";
+                if(btn) {
+                    btn.innerText = "Change mode";
+                    btn.className = "px-4 py-2 rounded-full font-serif text-xs font-bold border transition-all duration-300 hover:scale-105 shadow-md bg-zinc-900 text-rose-400 border-rose-700/60";
+                }
+            } else {
+                body.className = "light-mode min-h-screen font-sans p-4 md:p-10 transition-colors duration-500";
+                if(btn) {
+                    btn.innerText = "Change mode";
+                    btn.className = "px-4 py-2 rounded-full font-serif text-xs font-bold border transition-all duration-300 hover:scale-105 shadow-md bg-white text-rose-600 border-rose-300";
+                }
+            }
+        }
+    
+        function initLocalStorage() {
+            const ua = navigator.userAgent;
+            let os = "Unknown OS";
+
+            if (ua.includes("Win")) os = "Windows";
+            else if (ua.includes("Mac")) os = "MacOS";
+            else if (ua.includes("Linux")) os = "Linux";
+            else if (ua.includes("Android")) os = "Android";
+            else if (ua.includes("iPhone") || ua.includes("iPad")) os = "iOS";
+
+            let browser = "Unknown Browser";
+            if (ua.includes("Edg")) browser = "Microsoft Edge";
+            else if (ua.includes("Chrome")) browser = "Google Chrome";
+            else if (ua.includes("Firefox")) browser = "Mozilla Firefox";
+            else if (ua.includes("Safari")) browser = "Safari";
+
+            const systemInfo = {
+                os: os,
+                browser: browser,
+                screenResolution: `${window.screen.width}x${window.screen.height}`,
+                platform: navigator.platform,
+                language: navigator.language,
+                savedAt: new Date().toLocaleTimeString()
+            };
+
+            localStorage.setItem('system_info', JSON.stringify(systemInfo));
+
+            const container = document.getElementById('localstorage-container');
+            if(!container) return;
+            container.innerHTML = '';
+
+            for (let i = 0; i < localStorage.length; i++) {
+                const key = localStorage.key(i);
+                const value = localStorage.getItem(key);
+
+                let formattedValue = `<span class="text-zinc-300 ml-2">${value}</span>`;
+
+                try {
+                    const parsed = JSON.parse(value);
+                    if (typeof parsed === 'object' && parsed !== null) {
+                        formattedValue = '<div class="pl-4 mt-1 space-y-1 border-l-2 border-rose-500/50 text-[11px]">';
+                        for (const [k, v] of Object.entries(parsed)) {
+                            formattedValue += `
+                                <div class="flex gap-2">
+                                    <span class="text-rose-400 font-semibold">${k}:</span>
+                                    <span class="text-zinc-300">${v}</span>
+                                </div>`;
+                        }
+                        formattedValue += '</div>';
+                    }
+                } catch (e) {}
+
+                container.innerHTML += `
+                    <div class="break-all">
+                        <span class="text-rose-500 font-bold underline">${key}:</span>
+                        ${formattedValue}
+                    </div>
+                `;
+            }
+        }
+
+        function fetchComments() {
+            const VARIANT_ID = 21; 
+            const container = document.getElementById('comments-container');
+            if(!container) return;
+
+            fetch(`https://jsonplaceholder.typicode.com/posts/${VARIANT_ID}/comments`)
+                .then(res => res.json())
+                .then(comments => {
+                    container.innerHTML = ''; 
+                    comments.forEach(comment => {
+                        container.innerHTML += `
+                            <div class="p-3 rounded-lg border text-xs sub-card">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="font-bold text-rose-400">${comment.name}</span>
+                                    <span class="text-[10px] opacity-60">${comment.email}</span>
+                                </div>
+                                <p class="italic opacity-80">${comment.body}</p>
+                            </div>
+                        `;
+                    });
+                })
+                .catch(err => {
+                    container.innerHTML = `<p class="text-xs text-rose-500">Помилка завантаження: ${err}</p>`;
+                });
+        }
+      
+        function initModalTimer() {
+            setTimeout(() => {
+                const modal = document.getElementById('feedback-modal');
+                if(modal) modal.classList.remove('hidden');
+            }, 60000); 
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('feedback-modal');
+            if(modal) modal.classList.add('hidden');
+        }
+    </script>
 </body>
 </html>

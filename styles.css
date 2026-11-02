@@ -138,3 +138,43 @@ footer {
     margin-right: 0;
   }
 }
+
+/* Стилі для фону та кольору тексту всієї сторінки у темній темі */
+body.dark-mode { background-color: #09090b; color: #e4e4e7; }
+/* Стилі для фону та кольору тексту всієї сторінки у світлій темі */
+body.light-mode { background-color: #fff1f2; color: #1e293b; }
+
+/* Темний та світлий фон для основних карт-секцій (.bg-card) */
+body.dark-mode .bg-card { background-color: rgba(24, 24, 27, 0.9); border-color: #4c0519; }
+body.light-mode .bg-card { background-color: #ffffff; border-color: #ffe4e6; }
+
+/* Темний та світлий фон для вкладених дочірніх блоків (.sub-card) */
+body.dark-mode .sub-card { background-color: rgba(9, 9, 11, 0.9); border-color: #27272a; color: #e4e4e7; }
+body.light-mode .sub-card { background-color: #fff1f2; border-color: #fecdd3; color: #334155; }
+
+/* Стилі для модального вікна зворотного зв'язку залежно від активної теми */
+body.dark-mode .modal-box { background-color: #09090b; border-color: #e11d48; color: #f4f4f5; }
+body.light-mode .modal-box { background-color: #ffffff; border-color: #fda4af; color: #1e293b; }
+
+/* Основні стилі профілю */
+.profile-section {
+  background-color: #f8fafc;
+  color: #1e293b;
+  border-left: 4px solid #3b82f6;
+  padding: 15px 20px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Виправлення контрасту для темної теми */
+body.dark-mode .profile-section {
+  background-color: rgba(24, 24, 27, 0.9);
+  color: #e4e4e7;
+  border-left-color: #e11d48;
+}
+
+/* Яскраві заголовки h2 у темному режимі */
+body.dark-mode h2 {
+  color: #f43f5e; /* Рожевий акцентний колір (або #ffffff для білого) */
+}
